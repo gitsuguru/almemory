@@ -1,0 +1,19 @@
+.login
+  .login__name
+    .login__title Almemory
+  .login__register
+    .login__new= render "devise/shared/links"
+    .login__submit
+      .login__sign ログイン
+      = form_for(resource, as: resource_name, url: session_path(resource_name)) do |f|
+        .login__font
+          = f.label :email
+          .login__box
+            = f.email_field :email, autofocus: true, class: "login__field"
+        .login__font
+          = f.label :password
+          (英数字8文字以上)
+          .login__box
+            = f.password_field :password, autocomplete: "off", class: "login__field"
+        .login__box
+          = f.submit "Go!", class: "login__send"

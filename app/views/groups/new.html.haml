@@ -1,0 +1,14 @@
+.group
+  .group__title 
+    グループ作成
+  .group__box
+    = form_with model: @group, local: true do |f|
+      .group__font
+        = f.label :グループ名
+        = f.text_field :name, class: "group__field"
+        .group__font
+        = f.label :メンバー追加
+        .group__collection
+          = f.collection_check_boxes :user_ids, User.all, :id, :name
+        = f.submit "作成", class: "group__send"
+    = link_to "トップページに戻る", :back, class: "edit__back"

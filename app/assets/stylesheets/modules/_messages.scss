@@ -1,0 +1,82 @@
+* {
+  box-sizing: border-box;
+}
+
+.header {
+  background-color: orange;
+  height: 80px;
+  width: 100vw;
+}
+  .button {
+    display: flex;
+    justify-content: space-between;
+    &__right {
+      display: flex;
+      align-items: center;
+    }
+    &__top {
+      text-decoration: none;
+      margin: 0 50px 0 30px;
+      font-size: 50px;
+    }
+    &__group {
+      text-decoration: none;
+      font-size: 30px;
+    }
+    &__icon {
+      text-decoration: none;
+      margin-right: 30px;
+      font-size: 50px;
+    }
+  }
+
+.body {
+  background-color: white;
+  height: calc(100vh - 80px - 100px);
+  width: 100vw;
+}
+
+.footer {
+  background-color: lightslategrey;
+  display: flex;
+  height: 100px;
+  width: 100vw;
+}
+  .form {
+    display: flex;
+    &__placement {
+      position: relative;
+      margin: 15px 10px 0 50px;
+      width: 75vw;
+    }
+    &__message {
+      padding: 0 50px 0 20px;
+      height: 50px;
+      width: 75vw;
+    }
+    &__image {
+      position: absolute;
+      top: 2px;
+      right: 10px;
+      font-size: 30px;
+    }
+    &__image--none {
+      display: none;
+    }
+    &__submit {
+      margin-top: 15px;
+      font-size: 30px;
+      height: 50px;
+      width: 80px;
+    }
+  }
+  .group__edit {
+    background-color: white;
+    text-decoration: none;
+    text-align: center;
+    margin: 15px 0 0 50px;
+    padding-top: 3px;
+    font-size: 30px;
+    height: 50px;
+    width: 80px;
+  }
