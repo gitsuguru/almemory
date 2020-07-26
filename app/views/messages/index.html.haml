@@ -1,2 +1,24 @@
-%h1 Messages#index
-%p Find me in app/views/messages/index.html.haml
+.header
+  .button
+    %ul.button__right
+      %li= link_to "TOP", "#", class:"button__top"
+      %li= link_to "GroupName", "#", class:"button__group"
+    .button__left
+      = link_to "#", class:"button__icon" do
+        = icon("fas", "calculator")
+      = link_to "#", class:"button__icon" do
+        = icon("fas", "book-open")
+      = link_to "#", class:"button__icon" do
+        = icon("fas", "cookie")
+      = link_to "#", class:"button__icon" do
+        = icon("fas", "shopping-bag")
+.body
+.footer
+  = form_with url:"#", class: "form", local: true do |f|
+    .form__placement
+      = f.text_field :content, class: "form__message", placeholder: "メッセージを入力"
+      = f.label :image, class: "form__image" do
+        = icon("fas", "camera")
+        = f.file_field :image, class: "form__image--none"
+    = f.submit 'Send', class: "form__submit"
+  = link_to "Edit", "#", class:"group__edit"

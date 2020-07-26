@@ -1,0 +1,14 @@
+.top
+  .left
+    .left__name
+      = current_user.name
+    = link_to "グループ作成", new_group_path, class:"left__list"
+    = link_to "ユーザー変更", edit_user_path(current_user), class:"left__list"
+    = link_to "ログアウト", destroy_user_session_path, method: :delete, class:"left__list"
+  .right
+    .right__box
+      - current_user.groups.each do |group|
+        = link_to '#', class:"rigth__link" do
+          .right__group
+            = group.name
+          .right__member メンバー名

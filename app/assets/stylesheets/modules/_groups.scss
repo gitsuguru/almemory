@@ -1,0 +1,91 @@
+.top {
+  display: flex;
+}
+.left {
+  background-color: orange;
+  padding: 20px 0 0 20px;
+  height: 100vh;
+  width: 20vw;
+  &__name {
+    margin-bottom: 30px;
+    font-size: 35px;
+  }
+  &__list {
+    display: block;
+    text-decoration: none;
+    margin-top: 20px;
+    font-size: 30px;
+  }
+}
+.right {
+  background-color: slategray;
+  position: relative;
+  height: 100vh;
+  width: calc(100vw - 20vw);
+  &__box {
+    background-color: white;
+    overflow: scroll;
+    position: absolute;
+    top:  0;
+    bottom:  0;
+    left:  0;
+    right:  0;
+    margin: auto;
+    padding: 20px 0 0 20px;
+    height: 70vh;
+    width: 50vw;
+  }
+  &__group {
+    font-size: 50px;
+  }
+  &__member {
+    font-size: 30px;
+    margin-bottom: 20px;
+  }
+}
+
+.group {
+  background-color: orange;
+  position: relative;
+  height: 100vh;
+  width: 100vw;
+  &__title {
+    position: absolute;
+    right: 0;
+    left: 0;
+    margin: auto;
+    margin-top: 50px;
+    height: 0;
+    width: 350px;
+    font-size: 50px;
+  }
+  &__box {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    margin: auto;
+    padding-left: 100px;
+    height: 50vh;
+    width: 50vw;
+  }
+  &__font {
+    margin-top: 10px;
+    font-size: 25px;
+  }
+  &__field {
+    display: block;
+    width: 30vw;
+  }
+  &__send {
+    margin: 30px 0;
+    font-size: 30px;
+    height: 60px;
+    width: 100px;
+  }
+  &__back {
+    text-decoration: none;
+    font-size: 25px;
+  }
+}
