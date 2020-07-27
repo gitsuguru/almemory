@@ -13,7 +13,8 @@
       = link_to "#", class:"button__icon" do
         = icon("fas", "shopping-bag")
 .body
-  = render @messages
+  .body__contents
+    = render @messages
 .footer
   = form_with model: [@group, @message], class: "form", local: true do |f|
     .form__placement
