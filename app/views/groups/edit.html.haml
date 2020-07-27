@@ -1,4 +1,15 @@
-= form_with model: @group, local: true do |f|
-  = f.text_field :name, class: "SettingGroupForm__input", placeholder: "グループ名を入力してください"
-  = f.collection_check_boxes :user_ids, User.all, :id, :name
-  = f.submit "Save", class: "SettingGroupForm__button"
+.group
+  .group__title 
+    グループ編集
+  .group__box
+    = form_with model: @group, local: true do |f|
+      .group__font
+        = f.label :グループ名
+        = f.text_field :name, class: "group__field"
+        .group__font
+        = f.label :メンバー追加
+        .group__collection
+          = f.collection_check_boxes :user_ids, User.all, :id, :name
+        = f.submit "更新", class: "group__send"
+    = link_to "チャット画面に戻る", :back, class: "edit__back"
+
