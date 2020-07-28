@@ -1,5 +1,6 @@
 * {
   box-sizing: border-box;
+  text-decoration: none;
 }
 
 .header {
@@ -15,16 +16,13 @@
       align-items: center;
     }
     &__top {
-      text-decoration: none;
       margin: 0 50px 0 30px;
       font-size: 50px;
     }
     &__group {
-      text-decoration: none;
       font-size: 30px;
     }
     &__icon {
-      text-decoration: none;
       margin-right: 30px;
       font-size: 50px;
     }
@@ -88,7 +86,6 @@
   }
   .group__edit {
     background-color: white;
-    text-decoration: none;
     text-align: center;
     margin: 15px 0 0 50px;
     padding-top: 3px;
