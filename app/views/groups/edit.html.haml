@@ -9,7 +9,19 @@
         .group__font
         = f.label :メンバー追加
         .group__collection
-          = f.collection_check_boxes :user_ids, User.all, :id, :name
+          %input#search__field.group__field{type: "text"}
+        .search__add
+        .group__font グループメンバー
+        .search__delete
+          %p.member__current= current_user.name
+          %input{name: "group[user_ids][]", type: "hidden", value: current_user.id}
+          - @group.users.each do |user|
+            - if current_user.name != user.name
+              .member
+                .member__current
+                  = user.name
+                .member__remove{"data-user-id": user.id, "data-user-name": user.name} 削除
+                %input{name: "group[user_ids][]", type:"hidden", value: user.id}
         = f.submit "更新", class: "group__send"
     = link_to "チャット画面に戻る", :back, class: "edit__back"
 
