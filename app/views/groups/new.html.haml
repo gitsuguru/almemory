@@ -9,6 +9,11 @@
         .group__font
         = f.label :メンバー追加
         .group__collection
-          = f.collection_check_boxes :user_ids, User.all, :id, :name
+          %input#search__field.group__field{type: "text"}
+        .search__add
+        .group__font グループメンバー
+        .search__delete
+          %p.member__current= current_user.name
+          %input{name: "group[user_ids][]", type: "hidden", value: current_user.id}
         = f.submit "作成", class: "group__send"
     = link_to "トップページに戻る", :back, class: "edit__back"

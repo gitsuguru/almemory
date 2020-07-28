@@ -90,3 +90,23 @@
   }
 }
 
+.member {
+  line-height: 50px;
+  border-bottom: 1px solid #ddd;
+  font-size: 20px;
+  display: flex;
+  justify-content: space-between;
+  &__add {
+    cursor: pointer;
+    color: #38aef0;
+  }
+  &__remove {
+    cursor: pointer;
+    color: #f05050;
+  }
+  &__current {
+    line-height: 50px;
+    border-bottom: 1px solid #ddd;
+    font-size: 20px;
+  }
+}
