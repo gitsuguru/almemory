@@ -1,6 +1,6 @@
 .login {
   background-color: orange;
-  height: 130vh;
+  height: 100vh;
   width: 100vw;
   &__name {
     display: flex;
@@ -15,7 +15,6 @@
     justify-content: center;
   }
   &__new {
-    text-decoration: none;
     margin: 30px 50px 0 120px;
     font-size: 50px;
   }
@@ -79,7 +78,6 @@
     width: 100px;
   }
   &__back {
-    text-decoration: none;
     font-size: 25px;
   }
 }
