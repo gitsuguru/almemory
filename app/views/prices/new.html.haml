@@ -1,0 +1,25 @@
+.header
+  .button
+    %ul.button__right
+      %li= link_to "TOP", root_path, class:"button__top"
+      %li= link_to @group.name, group_messages_path(@group), class:"button__group"
+    .button__left
+      = link_to "#", class:"button__icon" do
+        = icon("fas", "calculator")
+      = link_to "#", class:"button__icon" do
+        = icon("fas", "book-open")
+      = link_to "https://recipe.rakuten.co.jp/", class:"button__icon" do
+        = icon("fas", "cookie")
+      = link_to new_group_price_path, class:"button__icon" do
+        = icon("fas", "shopping-bag")
+.price
+  = form_with model: [@group, @price], local: true do |f|
+    .price__form
+      = f.label :品名
+      = f.text_field :name
+      = f.label :値段（税込み、半角英数字）
+      = f.text_field :number
+      円
+    = f.submit "登録"
+.sarch
+ 
