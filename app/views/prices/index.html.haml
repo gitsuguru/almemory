@@ -1,0 +1,45 @@
+.header
+  .button
+    %ul.button__right
+      %li= link_to "TOP", root_path, class:"button__top"
+      %li= link_to @group.name, group_messages_path(@group), class:"button__group"
+    .button__left
+      = link_to group_prices_path, class:"button__icon" do
+        = icon("fas", "calculator")
+      = link_to "#", class:"button__icon" do
+        = icon("fas", "book-open")
+      = link_to "https://recipe.rakuten.co.jp/", class:"button__icon rakuten" do
+        = icon("fas", "cookie")
+      = link_to new_group_price_path, class:"button__icon" do
+        = icon("fas", "shopping-bag")
+.calculation
+  .calculation__box
+    .calculation__title
+      税金8%
+      %form{oninput: "op1.value = Number(a.value) * 1.08;"}
+        %input{name: "a", type: "number", placeholder: "金額を入力"}
+        × 1.08 ＝
+        %output{name: "op1"} 0
+    .calculation__title
+      税金10%
+      %form{oninput: "op2.value = Number(b.value) * 1.1;"}
+        %input{name: "b", type: "number", placeholder: "金額を入力"}
+        × 1.10 ＝
+        %output{name: "op2"} 0
+    .calculation__title
+      1あたりの値段
+      %form{oninput: "op3.value = Number(c.value) / Number(d.value);"}
+        %input{name: "c", type: "number", placeholder: "金額を入力"}
+        ÷
+        %input{name: "d", type: "number", placeholder: "数(個数、g)を入力"}
+        ＝
+        %output{name: "op3"} 0
+    .calculation__title
+      100gあたりの値段
+      %form{oninput: "op3.value = Number(e.value) / Number(f.value) * 100;"}
+        %input{name: "e", type: "number", placeholder: "金額を入力"}
+        ÷
+        %input{name: "f", type: "number", placeholder: "数(個数、g)を入力"}
+        × 100 ＝
+        %output{name: "op3"} 0
+  

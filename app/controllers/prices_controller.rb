@@ -1,6 +1,9 @@
 class PricesController < ApplicationController
   before_action :get_group
 
+  def index
+  end
+
   def new
     @price = Price.new
   end
@@ -8,7 +11,7 @@ class PricesController < ApplicationController
   def create
     @price = @group.prices.new(price_params)
     if @price.save
-      redirect_to new_group_price_path(@group), notice: "登録しました"
+      redirect_to new_group_price_path, notice: "登録しました"
     else
       @prices = @group.prices
       flash.now[:alert] = "内容を入力してください"

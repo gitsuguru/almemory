@@ -3,7 +3,7 @@ Rails.application.routes.draw do
   root "groups#index"
   resources :users, only: [:index, :edit, :update]
   resources :groups, only: [:new, :create, :edit, :update] do
-    resources :prices, only: [:new, :create]
+    resources :prices, only: [:index, :new, :create]
     resources :messages, only: [:index, :create]
     namespace :api do
       resources :messages, only: :index, defaults: { format: 'json' }
