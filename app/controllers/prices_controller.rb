@@ -15,7 +15,7 @@ class PricesController < ApplicationController
     else
       @prices = @group.prices
       flash.now[:alert] = "内容を入力してください"
-      render :index
+      render :new
     end
   end
   
