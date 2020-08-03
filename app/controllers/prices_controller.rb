@@ -1,5 +1,5 @@
 class PricesController < ApplicationController
-  before_action :get_group
+  before_action :set_group
 
   def index
   end
@@ -24,7 +24,7 @@ class PricesController < ApplicationController
     params.require(:price).permit(:name, :number)
   end
 
-  def get_group
+  def set_group
     @group = Group.find(params[:group_id])
   end
 end

@@ -1,4 +1,3 @@
-= javascript_include_tag "autoUpdating"
 .header
   .button
     %ul.button__right
@@ -13,15 +12,9 @@
         = icon("fas", "cookie")
       = link_to new_group_price_path, class:"button__icon" do
         = icon("fas", "shopping-bag")
-.body
-  .body__contents
-    = render @messages
-.footer
-  = form_with model: [@group, @message], class: "form", local: true do |f|
-    .form__placement
-      = f.text_field :content, class: "form__message", placeholder: "メッセージを入力"
-      = f.label :image, class: "form__image" do
-        = icon("fas", "camera")
-        = f.file_field :image, class: "form__image--none"
-    = f.submit "送信", class: "form__submit"
-  = link_to "編集", edit_group_path(@group), class:"group__edit"
+.memo__new
+  メモ内容
+  = form_with model: [@group, @memo], local: true do |f|
+    .memo__new__form
+      = f.text_area :text
+    = f.submit "メモ"
