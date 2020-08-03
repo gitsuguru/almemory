@@ -3,6 +3,7 @@ Rails.application.routes.draw do
   root "groups#index"
   resources :users, only: [:index, :edit, :update]
   resources :groups, only: [:new, :create, :edit, :update] do
+    resources :memos, only: [:index, :new, :create, :destroy, :edit, :update]
     resources :prices, only: [:index, :new, :create]
     namespace :api do
       resources :prices, only: :index, defaults: { format: 'json' }
