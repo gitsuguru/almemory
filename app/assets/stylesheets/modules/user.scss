@@ -16,8 +16,9 @@
 .devise__change {
   color: black;
   font-size: 30px;
+  font-weight: bold;
   margin-right: 50px;
-  }
+}
 @keyframes title {
   0% {
     color: red;
@@ -35,7 +36,7 @@
   animation-iteration-count: infinite;
 }
 .devise__change:hover {
-  font-size: 40px;
+  font-size: 35px;
 }
 
 .sub {

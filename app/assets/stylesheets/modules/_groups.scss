@@ -2,44 +2,61 @@
   display: flex;
 }
 .left {
-  background-color: orange;
-  padding: 20px 0 0 20px;
+  background-color: yellow;
+  padding: 20px 20px 0 20px;
   height: 100vh;
   width: 20vw;
   &__name {
-    margin-bottom: 30px;
+    color: blue;
+    height: 15vh;
     font-size: 35px;
+    font-weight: bold;
   }
   &__list {
+    color: black;
     display: block;
     margin-top: 20px;
     font-size: 30px;
+    font-weight: bold;
   }
 }
+.left__list:hover {
+  font-size: 35px;
+}
 .right {
-  background-color: slategray;
-  position: relative;
-  height: 100vh;
-  width: calc(100vw - 20vw);
-  &__box {
-    background-color: white;
+  background-color: white;
+  width: 80vw;
+
+  &__title {
+    background-color: orange;
+    height: 10vh;
+    font-size: 50px;
+    font-weight: bold;
+    text-align: center;
+  }
+}
+.right__box {
     overflow: scroll;
-    position: absolute;
-    top:  0;
-    bottom:  0;
-    left:  0;
-    right:  0;
-    margin: auto;
-    padding: 20px 0 0 20px;
-    height: 70vh;
-    width: 50vw;
+    height: 90vh;
+  &__display {
+    display: flex;
+    align-items: center;
   }
   &__group {
-    font-size: 50px;
+    color: black;
+    width: 40vw;
+    font-size: 30px;
+    margin-left: 20px;
   }
   &__member {
-    font-size: 30px;
-    margin-bottom: 20px;
+    color: black;
+    width: 40vw;
+    font-size: 25px;
+    margin-left: 20px;
+    border-bottom: 1px solid lightskyblue;
+  }
+  &__left {
+    width: 40vw;
   }
 }
 
