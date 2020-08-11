@@ -1,41 +1,102 @@
 .login {
   background-color: orange;
-  height: 100vh;
   width: 100vw;
-  &__name {
+  height: 10vh;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  &__header__left {
     display: flex;
-    justify-content: center;
+    margin-left: 10px;
   }
-  &__title {
-    margin-top: 10px;
-    font-size: 130px;
-  }
-  &__register {
-    display: flex;
-    justify-content: center;
-  }
-  &__new {
-    margin: 30px 50px 0 120px;
-    font-size: 50px;
-  }
-  &__sign {
-    margin-top: 30px;
-    font-size: 50px;
-  }
-  &__font {
-    margin-top: 10px;
-    font-size: 25px;
-  }
-  &__field {
-    width: 30vw;
-  }
-  &__send {
-    margin-top: 30px;
-    font-size: 30px;
-    height: 60px;
-    width: 100px;
+  &__header__title {
+    font-size: 55px;
   }
 }
+.devise__change {
+  color: black;
+  font-size: 30px;
+  margin-right: 50px;
+  }
+@keyframes title {
+  0% {
+    color: red;
+  }
+  50% {
+    color: yellow;
+  }
+  100% {
+    color: lime;
+  }
+}
+.login__header__title {
+  animation-name: title;
+  animation-duration: 5s;
+  animation-iteration-count: infinite;
+}
+.devise__change:hover {
+  font-size: 40px;
+}
+
+.sub {
+  width: 100vw;
+  height: 10vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  &__title {
+    font-size: 70px;
+    font-family: "Montserrat","游ゴシック",YuGothic,"ヒラギノ角ゴ ProN W3","Hiragino Kaku Gothic ProN","メイリオ",Meiryo,sans-serif;
+  }
+}
+@keyframes login {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 100;
+  }
+}
+.sub__title {
+  animation-name: login;
+  animation-duration: 4s;
+}
+
+.main {
+  background-color: yellow;
+  width: 100vw;
+  height: 80vh;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.main__display {
+  background-color: white;
+  width: 550px;
+  height: 500px;
+  margin-left: 100px;
+  display: flex;
+  border: 5px solid #d2e6eb
+}
+.main__form {
+    margin-right: 250px;
+  &__font {
+    font-size: 30px;
+    margin-bottom: 5px;
+  }
+  &__field {
+    width: 20vw;
+    height: 5vh;
+    margin-bottom: 15px;
+  }
+  &__send {
+    width: 70px;
+    height: 50px;
+    font-size: 20px;
+    margin: 30px 0 0 0;
+  }
+}
+
 
 .edit {
   background-color: orange;

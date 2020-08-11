@@ -1,19 +1,25 @@
 .login
-  .login__name
-    .login__title Almemory
-  .login__register
-    .login__new= render "devise/shared/links"
-    .login__submit
-      .login__sign ログイン
-      = form_for(resource, as: resource_name, url: session_path(resource_name)) do |f|
-        .login__font
-          = f.label :email
-          .login__box
-            = f.email_field :email, autofocus: true, class: "login__field"
-        .login__font
-          = f.label :password
-          (英数字8文字以上)
-          .login__box
-            = f.password_field :password, autocomplete: "off", class: "login__field"
-        .login__box
-          = f.submit "Go!", class: "login__send"
+  .login__header
+    .login__header__left
+      = image_tag "houchou.png",alt: "~", size: "75x75"
+      %b.login__header__title Almemory
+      = image_tag "fryingpan.png",alt: "~", size: "75x75"
+      = image_tag "kago.png",alt: "~", size: "75x75"
+  .devise__login= render "devise/shared/links"
+  
+.sub
+  .sub__title
+    ログイン
+
+.main
+  .main__display
+  = form_for(resource, as: resource_name, url: session_path(resource_name)) do |f|
+    .main__form
+      .main__form__font
+        = f.label :email
+      = f.email_field :email, autofocus: true, class: "main__form__field"
+      .main__form__font
+        = f.label :password
+        (英数字8文字以上)
+      = f.password_field :password, autocomplete: "off", class: "main__form__field"
+    = f.submit "Go!", class: "main__form__send"
