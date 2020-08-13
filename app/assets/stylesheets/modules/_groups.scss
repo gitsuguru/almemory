@@ -61,51 +61,52 @@
 }
 
 .group {
-  background-color: orange;
-  position: relative;
+  background-color: yellow;
   height: 100vh;
   width: 100vw;
+  overflow: scroll;
   &__title {
-    position: absolute;
-    right: 0;
-    left: 0;
-    margin: auto;
-    margin-top: 50px;
-    height: 0;
-    width: 350px;
     font-size: 50px;
+    font-weight: bold;
+    text-align: center;
+    padding-top: 20px;
   }
   &__box {
-    position: absolute;
-    top: 0;
-    bottom: 0;
-    right: 0;
-    left: 0;
-    margin: auto;
-    padding-left: 100px;
-    height: 50vh;
-    width: 50vw;
+    display: flex;
+    justify-content: space-between;
+  }
+  &__display {
+    margin: 20px 0 0 180px;
   }
   &__font {
-    margin-top: 10px;
     font-size: 25px;
   }
   &__field {
     display: block;
     width: 30vw;
+    margin-bottom: 20px;
+  }
+  &__member {
+    margin: 20px 180px 0 0;
   }
   &__send {
-    margin: 30px 0;
+    background-color: white;
     font-size: 30px;
     height: 60px;
     width: 100px;
+    margin: 20px 0 0 510px;
   }
   &__back {
+    width: 100vw;
     font-size: 25px;
+    text-align: center;
+    color: black;
+    display: block;
+    margin-top: 40px;
   }
 }
-
 .member {
+  width: 30vw;
   line-height: 50px;
   border-bottom: 1px solid #ddd;
   font-size: 20px;
@@ -120,6 +121,7 @@
     color: #f05050;
   }
   &__current {
+    width: 30vw;
     line-height: 50px;
     border-bottom: 1px solid #ddd;
     font-size: 20px;

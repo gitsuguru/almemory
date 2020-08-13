@@ -12,9 +12,9 @@
         .right__box__display
           .rigth__box__right
             = link_to group_messages_path(group) do
-              .right__box__group= group.name
+              .right__box__group= group.name.truncate(20)
               .right__box__member 
                 - group.users.each do |user|
                   = user.name
           .rigth__box__left
-            = group.show_last_message
+            = group.show_last_message.truncate(100)
