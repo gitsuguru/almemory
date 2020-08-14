@@ -1,13 +1,14 @@
 .edit
   .edit__title 
     アカウント編集
-  .edit__box
-    = form_for(current_user) do |f|
-      .edit__font
-        = f.label :名前
-        = f.text_field :name, autofocus: true, class: "edit__field"
-      .edit__font
-        = f.label :email
-        = f.email_field :email, class: "edit__field"
-      = f.submit "更新", class: "edit__send"
-    = link_to "トップページに戻る", :back, class: "edit__back"
+  = form_for(current_user) do |f|
+    .edit__box
+      .edit__display
+        .edit__font
+          = f.label :名前
+          = f.text_field :name, autofocus: true, class: "edit__field"
+        .edit__font
+          = f.label :email
+          = f.email_field :email, class: "edit__field"
+    = f.submit "更新", class: "edit__send"
+  = link_to "トップページに戻る", "/", class: "edit__back"
