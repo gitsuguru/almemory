@@ -117,14 +117,16 @@
     cursor: pointer;
     color: #38aef0;
   }
-  &__remove {
-    cursor: pointer;
-    color: #f05050;
-  }
   &__current {
     width: 30vw;
+    display: flex;
+    justify-content: space-between;
     line-height: 50px;
     border-bottom: 1px solid #ddd;
     font-size: 20px;
+  }
+  &__remove {
+    cursor: pointer;
+    color: #f05050;
   }
 }
