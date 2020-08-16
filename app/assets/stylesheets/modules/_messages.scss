@@ -11,22 +11,35 @@
   .button {
     display: flex;
     justify-content: space-between;
+    align-items: center;
     &__right {
       display: flex;
       align-items: center;
     }
     &__top {
-      margin: 0 50px 0 30px;
+      color: black;
       font-size: 50px;
+      margin: 5px 30px 0 20px;
     }
     &__group {
+      color: black;
       font-size: 30px;
     }
     &__icon {
-      margin-right: 30px;
+      color: black;
       font-size: 50px;
+      margin-right: 20px;
     }
   }
+.button__top:hover {
+  color: #006ebe;
+}
+.button__group:hover {
+  color: #006ebe;
+}
+.button__icon:hover {
+  color: #006ebe;
+}
 
 .body {
   background-color: white;
@@ -51,7 +64,7 @@
 }
 
 .footer {
-  background-color: lightslategrey;
+  background-color: yellow;
   display: flex;
   height: 100px;
   width: 100vw;
@@ -78,18 +91,27 @@
       display: none;
     }
     &__submit {
+      background-color: white;
       margin-top: 15px;
       font-size: 30px;
       height: 50px;
       width: 80px;
     }
   }
-  .group__edit {
-    background-color: white;
-    text-align: center;
-    margin: 15px 0 0 50px;
-    padding-top: 3px;
-    font-size: 30px;
-    height: 50px;
-    width: 80px;
+.form__image:hover {
+  color: #006ebe;
+}
+
+.group__edit {
+  color: black;
+  background-color: white;
+  margin: 15px 0 0 50px;
+  padding: 4px 0 0 11px;
+  font-size: 30px;
+  height: 50px;
+  width: 80px;
   }
+.group__edit:hover {
+  color: #006ebe;
+}
+
