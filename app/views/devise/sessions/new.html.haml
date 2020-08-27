@@ -12,7 +12,7 @@
     ログイン
 
 .main
-  .main__display
+  =render "devise/shared/slick"
   = form_for(resource, as: resource_name, url: session_path(resource_name)) do |f|
     .main__form
       .main__form__font

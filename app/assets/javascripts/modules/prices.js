@@ -8,18 +8,17 @@ $(function() {
   function addPrice(price) {
     let html = 
       `<div class="search__display">
-        <div class="search__name">${price.name}</div>
-        <div class="search__number">${price.number}円</div>
+        <div class="search__name">${price.name}<span class="search__number">${price.number}円</span></div>
       </div>`;
-    $("#search__result").append(html);
+    $(".search__result").append(html);
   }
   
   function addNoPrice() {
     let html = 
       `<div class="search__display">
-        <div class="search__name">品物が見つかりません</div>
+        <div class="search__none">品物が見つかりません</div>
       </div>`;
-    $("#search__result").append(html);
+    $(".search__result").append(html);
   }
 
   $(".search__field").on("keyup", function() {
@@ -31,7 +30,7 @@ $(function() {
       dataType: "json"
     })
     .done(function(prices) {
-      $("#search__result").empty();
+      $(".search__result").empty();
       if (prices.length !== 0) {
         prices.forEach(function(price) {
           addPrice(price);
