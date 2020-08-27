@@ -74,6 +74,8 @@ Almemory
 
 ・gem 'rakuten_web_service'
 
+・slick
+
 ## 課題や今後実装したい機能
 
 ひと段落ついたら書く
