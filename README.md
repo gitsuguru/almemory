@@ -47,13 +47,35 @@ Almemory
 工夫したポイントとしては、グループごとで情報を持たせるということです。商品の登録、検索、メモ機能にしてもグループごとで情報を持たせることで、同じグループで同じ情報を共有できるようにしました。また、グループごとに持っている情報が異なるので、そのグループにあった情報のみを共有することができます。
 
 ## 使用技術(開発環境)
-・
+・ruby '2.6.5'
 
-・
+・gem 'rails', '~> 6.0.0'
 
-・
+・gem 'mysql2', '>= 0.4.4'
+
+・gem 'sass-rails', '~> 5'
+
+・gem 'jbuilder', '~> 2.7'
+
+・gem "haml-rails", ">= 1.0", '<= 2.0.1'
+
+・gem 'font-awesome-sass'
+
+・gem 'devise'
+
+・gem 'carrierwave'
+
+・gem 'mini_magick'
+
+・gem 'jquery-rails'
+
+・gem 'pry-rails'
+
+・gem 'rakuten_web_service'
 
 ## 課題や今後実装したい機能
+
+ひと段落ついたら書く
 
 ## DB設計
 
