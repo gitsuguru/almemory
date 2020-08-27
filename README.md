@@ -132,7 +132,7 @@ Almemory
 |group|reference|foreign_key: true|
 ### アソシエーション
 -belongs_to :group
-## pricesテーブル
+## memosテーブル
 |Column|Type|Options|
 |------|----|-------|
 |text|string|null: false|
