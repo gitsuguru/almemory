@@ -3,7 +3,7 @@
 ## アプリ名
 Almemory
 
-## 概要（このアプリでできること）
+# 概要（このアプリでできること）
 ・メモ
 
 ・グループ作成
@@ -22,14 +22,14 @@ Almemory
 
 ・計算（消費税額、1あたりの値段、100あたりの値段）
 
-## 本番環境
+# 本番環境
 デプロイ先：
 
 ログインEメール：
 
 ログインパスワード：
 
-## 制作背景(意図)
+# 制作背景(意図)
 今回このアプリを作成した理由としては、大きく2点あります。
 
 1点目が買い物の際の、値段に対する課題を解決するためです。近年の社会情勢の中、節約や自炊に注目が集まっています。その中で買い物に行く際、できるだけ無駄なく安い商品を買いたいという意識も高まっています。しかし、実際に買い物に行って商品をみて、これは安い商品なのかどうか判断するのは難しく、また以前買ったときの値段を記憶しておくのも限界があります。そこでその問題を解決しようとこのアプリを制作しました。商品の値段登録ができ検索できることで、安いかどうかの基準を作ることができます。そのため、商品を買うべきかどうかの判断を手助けしてくれます。また一度買った商品は登録することで、いつでも以前買ったときの値段が確認でき記憶する必要もなくなります。
@@ -38,15 +38,15 @@ Almemory
 
 また上記の２点に付属して、僕が実際に買い物をする際にあったらいいなと思う機能を実装しています。
 
-## DEMO
+# DEMO
 
   　⇒gifで動画や写真を貼って、ビューのイメージを掴んでもらいます。
    　特に、デプロイがまだできていない場合はDEMOをつけることで見た目を企業側に伝えることができます。
 
-## 工夫したポイント
+# 工夫したポイント
 工夫したポイントとしては、グループごとで情報を持たせるということです。商品の登録、検索、メモ機能にしてもグループごとで情報を持たせることで、同じグループで同じ情報を共有できるようにしました。また、グループごとに持っている情報が異なるので、そのグループにあった情報のみを共有することができます。
 
-## 使用技術(開発環境)
+# 使用技術(開発環境)
 ・ruby '2.6.5'
 
 ・gem 'rails', '~> 6.0.0'
@@ -77,7 +77,65 @@ Almemory
 
 ひと段落ついたら書く
 
-## DB設計
+# DB設計
+## usersテーブル
+|Column|Type|Options|
+|------|----|-------|
+|name|string|null: false, unique: true|
+|password|string|null: false|
+|email|string|null: false, unique: true|
+### アソシエーション
+-has_many :group_users
 
+-has_many :groups, through: :group_users
 
+-has_many :messages
+## groupsテーブル
+|Column|Type|Options|
+|------|----|-------|
+|name|string|null: false, unique: true|
+### アソシエーション
+-has_many :group_users
 
+-has_many :users, through: :group_users
+
+-has_many :messages
+
+-has_many :prices
+
+-has_many :memos
+## group_usersテーブル
+|Column|Type|Options|
+|------|----|-------|
+|group|reference|foreign_key: true|
+|user|reference|foreign_key: true|
+### アソシエーション
+-belongs_to :group
+
+-belongs_to :user
+## messagesテーブル
+|Column|Type|Options|
+|------|----|-------|
+|content|string|null: false, unless: :image?|
+|image|string||
+|group|reference|foreign_key: true|
+|user|reference|foreign_key: true|
+### アソシエーション
+-belongs_to :group
+
+-belongs_to :user
+## pricesテーブル
+|Column|Type|Options|
+|------|----|-------|
+|name|string|null: false, unique: true|
+|number|integer|null: false|
+|group|reference|foreign_key: true|
+### アソシエーション
+-belongs_to :group
+## pricesテーブル
+|Column|Type|Options|
+|------|----|-------|
+|text|string|null: false|
+|group|reference|foreign_key: true|
+### アソシエーション
+-belongs_to :group
