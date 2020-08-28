@@ -6,10 +6,10 @@
       .group__display
         .group__font
           = f.label :グループ名
-          = f.text_field :name, class: "group__field"
+          = f.text_field :name, placeholder: "作成したいグループ名", class: "group__field"
         .group__font
           = f.label :メンバー追加
-          %input#search__field.group__field{type: "text"}
+          %input#search__field.group__field{type: "text", placeholder: "追加したいユーザー名"}
           .search__add
       .group__member
         .group__font グループメンバー

@@ -9,7 +9,7 @@
         .price__name
           = f.label :品名
         .price__text
-          = f.text_field :name, class: "price__field"
+          = f.text_field :name, placeholder: "登録したい品名", class: "price__field"
         .price__name
           = f.label :値段（税込み）
         .price__text
@@ -25,6 +25,7 @@
     できるだけ品名は詳細に登録してください。
     %br メーカーや種類ごとに登録しましょう!!
     検索する際、より明確に最安値を検索できます。
+    %br
     %br 例）玉ねぎ　→　玉ねぎ1袋3個入り
     例）ハンドソープ　→　◯◯のハンドソープ
 

@@ -19,13 +19,13 @@
     .calculation__text
       税金8%
       %form{oninput: "op1.value = Number(a.value) * 1.08;"}
-        %input{name: "a", type: "number", placeholder: "金額を入力"}
+        %input{name: "a", type: "number", placeholder: "金額を入力", class: "calculation__field"}
         × 1.08 ＝
         %output{name: "op1"} 0
     .calculation__text
       税金10%
       %form{oninput: "op2.value = Number(b.value) * 1.1;"}
-        %input{name: "b", type: "number", placeholder: "金額を入力"}
+        %input{name: "b", type: "number", placeholder: "金額を入力", class: "calculation__field"}
         × 1.10 ＝
         %output{name: "op2"} 0
     .calculation__text
@@ -34,25 +34,25 @@
       例)1個32円の玉ねぎ50個分の値段 
       %b 32×50=1600
       %form{oninput: "op5.value = Number(g.value) * Number(h.value);"}
-        %input{name: "g", type: "number", placeholder: "金額を入力"}
+        %input{name: "g", type: "number", placeholder: "金額を入力", class: "calculation__field"}
         ×
-        %input{name: "h", type: "number", placeholder: "数(個数、g)を入力"}
+        %input{name: "h", type: "number", placeholder: "数(個数、g)を入力", class: "calculation__field"}
         ＝
         %output{name: "op5"} 0
     .calculation__text
       1あたりの値段
       %form{oninput: "op3.value = Number(c.value) / Number(d.value);"}
-        %input{name: "c", type: "number", placeholder: "金額を入力"}
+        %input{name: "c", type: "number", placeholder: "金額を入力", class: "calculation__field"}
         ÷
-        %input{name: "d", type: "number", placeholder: "数(個数、g)を入力"}
+        %input{name: "d", type: "number", placeholder: "数(個数、g)を入力", class: "calculation__field"}
         ＝
         %output{name: "op3"} 0
     .calculation__text
       100あたりの値段
       %form{oninput: "op4.value = Number(e.value) / Number(f.value) * 100;"}
-        %input{name: "e", type: "number", placeholder: "金額を入力"}
+        %input{name: "e", type: "number", placeholder: "金額を入力", class: "calculation__field"}
         ÷
-        %input{name: "f", type: "number", placeholder: "数(個数、g)を入力"}
+        %input{name: "f", type: "number", placeholder: "数(個数、g)を入力", class: "calculation__field"}
         × 100 ＝
         %output{name: "op4"} 0
   

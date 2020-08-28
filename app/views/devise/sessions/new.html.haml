@@ -17,9 +17,8 @@
     .main__form
       .main__form__font
         = f.label :email
-      = f.email_field :email, autofocus: true, class: "main__form__field"
+      = f.email_field :email, autofocus: true, placeholder: "メールアドレス", class: "main__form__field"
       .main__form__font
         = f.label :password
-        (英数字8文字以上)
-      = f.password_field :password, autocomplete: "off", class: "main__form__field"
+      = f.password_field :password, autocomplete: "off", placeholder: "英数字8文字以上", class: "main__form__field"
     = f.submit "Go!", class: "main__form__send"

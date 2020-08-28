@@ -4,7 +4,7 @@
     メモ内容
   = form_with model: [@group, @memo], local: true do |f|
     .memo__box
-      = f.text_area :text, row: 10, class: "memo__form"
+      = f.text_area :text, row: 10, placeholder: "メモの内容を入力", class: "memo__form"
     = f.submit "更新", class: "memo__button"
 
 

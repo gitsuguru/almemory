@@ -24,6 +24,7 @@
     height: 35px;
     padding-left: 5px;
     margin-bottom: 20px;
+    padding-left: 10px;
   }
   &__button {
     background-color: white;
@@ -72,11 +73,14 @@ span {
     padding-top: 20px;
   }
   &__box {
-    margin: 20px 0 0 200px;
+    margin: 20px 0 0 100px;
   }
   &__text {
     font-size: 30px;
     margin-top: 10px;
+  }
+  &__field {
+    padding-left: 10px;
   }
 }
 b {

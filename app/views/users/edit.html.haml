@@ -6,9 +6,9 @@
       .edit__display
         .edit__font
           = f.label :名前
-          = f.text_field :name, autofocus: true, class: "edit__field"
+          = f.text_field :name, autofocus: true, placeholder: "変更したいニックネーム", class: "edit__field"
         .edit__font
           = f.label :email
-          = f.email_field :email, class: "edit__field"
+          = f.email_field :email, placeholder: "変更したメールアドレス", class: "edit__field"
     = f.submit "更新", class: "edit__send"
   = link_to "トップページに戻る", "/", class: "edit__back"
