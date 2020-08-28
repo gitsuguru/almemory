@@ -1,5 +1,4 @@
 # README
-![Almemory - localhost　新規登録](https://user-images.githubusercontent.com/67818465/91400672-01f9f000-e87b-11ea-8155-ba15badfbb2e.png)
 
 ## アプリ名
 Almemory
