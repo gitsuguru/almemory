@@ -1,20 +1,16 @@
-.header
-  .button
-    %ul.button__right
-      %li= link_to "TOP", root_path, class:"button__top"
-      %li= link_to @group.name, group_messages_path(@group), class:"button__group"
-    .button__left
-      = link_to group_prices_path, class:"button__icon" do
-        = icon("fas", "calculator")
-      = link_to group_memos_path, class:"button__icon" do
-        = icon("fas", "book-open")
-      = link_to "https://recipe.rakuten.co.jp/", class:"button__icon rakuten" do
-        = icon("fas", "cookie")
-      = link_to new_group_price_path, class:"button__icon" do
-        = icon("fas", "shopping-bag")
+= render "render/header"
 .memo
-= link_to "メモする", new_group_memo_path
-- @memos.each do |memo|
-  = memo.text
-  = link_to "編集", edit_group_memo_path(@group,memo.id)
-  = link_to "削除", group_memo_path(@group,memo.id), method: :delete
+  .memo__flow
+    .memo__title
+      メモ一覧
+      = link_to "（メモする）", new_group_memo_path, class: "memo__register"
+    - @memos.each do |memo|
+      .memo__display
+        .memo__text
+          = memo.text.truncate(40)
+        .memo__link
+          = link_to "編集", edit_group_memo_path(@group,memo.id), class: "memo__blue"
+        .memo__link
+          = link_to "削除", group_memo_path(@group,memo.id), method: :delete, class: "memo__red"
+
+

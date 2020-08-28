@@ -1,0 +1,48 @@
+.memo {
+  background-color: yellow;
+  height: calc(100vh - 80px);
+  &__title {
+    font-size: 50px;
+    font-weight: bold;
+    text-align: center;
+    padding-top: 20px;
+  }
+  &__form {
+    font-size: 20px;
+    width: 50vw;
+    height: 50vh;
+    padding: 5px 0 0 10px;
+    margin-left: 360px;
+  }
+  &__button {
+    background-color: white;
+    font-size: 30px;
+    height: 60px;
+    width: 100px;
+    margin: 30px 0 0 980px;
+  }
+  &__flow {
+    overflow: scroll;
+    height: calc(100vh - 80px);
+  }
+  &__register {
+    color: black;
+  }
+  &__display {
+    display: flex;
+    font-size: 30px;
+    margin: 20px 0 20px 20px;
+  }
+  &__link {
+    margin-left: 20px;
+  }
+  &__blue {
+    color: #38aef0;
+  }
+  &__red {
+    color: red;
+  }
+}
+
+
+

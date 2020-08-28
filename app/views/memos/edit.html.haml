@@ -1,20 +1,10 @@
-.header
-  .button
-    %ul.button__right
-      %li= link_to "TOP", root_path, class:"button__top"
-      %li= link_to @group.name, group_messages_path(@group), class:"button__group"
-    .button__left
-      = link_to group_prices_path, class:"button__icon" do
-        = icon("fas", "calculator")
-      = link_to group_memos_path, class:"button__icon" do
-        = icon("fas", "book-open")
-      = link_to "https://recipe.rakuten.co.jp/", class:"button__icon rakuten" do
-        = icon("fas", "cookie")
-      = link_to new_group_price_path, class:"button__icon" do
-        = icon("fas", "shopping-bag")
-.memo__edit
-  メモ内容
+= render "render/header"
+.memo
+  .memo__title
+    メモ内容
   = form_with model: [@group, @memo], local: true do |f|
-    .memo__edit__form
-      = f.text_area :text
-    = f.submit "更新"
+    .memo__box
+      = f.text_area :text, row: 10, class: "memo__form"
+    = f.submit "更新", class: "memo__button"
+
+

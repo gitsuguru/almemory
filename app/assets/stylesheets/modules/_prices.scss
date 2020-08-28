@@ -33,7 +33,7 @@
     margin: 30px 0 0 80px;
   }
   &__explanation {
-    font-size: 25px;
+    font-size: 20px;
     font-weight: bold;
     margin: 30px 0 0 150px;
   }
@@ -61,4 +61,27 @@ span {
   font-weight: bold;
   }
 }
+
+.calculation {
+  background-color: yellow;
+  height: calc(100vh - 80px);
+  &__title {
+    font-size: 50px;
+    font-weight: bold;
+    text-align: center;
+    padding-top: 20px;
+  }
+  &__box {
+    margin: 20px 0 0 200px;
+  }
+  &__text {
+    font-size: 30px;
+    margin-top: 10px;
+  }
+}
+b {
+  color: red;
+  margin-left: 15px;
+}
+
 
