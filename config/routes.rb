@@ -4,7 +4,7 @@ Rails.application.routes.draw do
   resources :users, only: [:index, :edit, :update]
   resources :groups, only: [:new, :create, :edit, :update] do
     resources :memos, only: [:index, :new, :create, :destroy, :edit, :update]
-    resources :prices, only: [:index, :new, :create]
+    resources :prices, only: [:index, :new, :create, :edit, :update, :destroy]
     namespace :api do
       resources :prices, only: :index, defaults: { format: 'json' }
     end

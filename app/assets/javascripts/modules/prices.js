@@ -9,6 +9,7 @@ $(function() {
     let html = 
       `<div class="search__display">
         <div class="search__name">${price.name}<span class="search__number">${price.number}円</span></div>
+        <a href = "/groups/${price.group_id}/prices/${price.id}/edit" class="search__edit">編集</a>
       </div>`;
     $(".search__result").append(html);
   }

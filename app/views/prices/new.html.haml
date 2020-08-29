@@ -3,31 +3,34 @@
 .price
   .price__title 
     最安値登録
-  .price__box
-    .price__form
-      = form_with model: [@group, @price], local: true do |f|
-        .price__name
-          = f.label :品名
-        .price__text
-          = f.text_field :name, placeholder: "登録したい品名", class: "price__field"
-        .price__name
-          = f.label :値段（税込み）
-        .price__text
-          = f.text_field :number, placeholder: "半角英数字", class: "price__field"
-          %span 円
-        = f.submit "登録", class: "price__button"
-    .search
-      .price__name
-        最安値検索
-      %input.search__field.price__field{placeholder: "検索したい品物", type: "text"}
+  .price__flex
+    .price__display
+      .price__flex
+        .price__form
+          = form_with model: [@group, @price], local: true do |f|
+            .price__name
+              = f.label :品名
+            .price__text
+              = f.text_field :name, placeholder: "登録したい品名", class: "price__field"
+            .price__name
+              = f.label :値段（税込み）
+            .price__text
+              = f.text_field :number, placeholder: "半角英数字", class: "price__field"
+              %span 円
+            = f.submit "登録", class: "price__button"
+        .search
+          .price__name
+            最安値検索
+          %input.search__field.price__field{placeholder: "検索したい品物", type: "text"}
+      .price__explanation
+        できるだけ品名は詳細に登録してください。
+        %br メーカーや種類ごとに登録しましょう!!
+        検索する際、より明確に最安値を検索できます。
+        %br
+        %br 例）玉ねぎ　→　玉ねぎ1袋3個入り
+        例）ハンドソープ　→　◯◯のハンドソープ
     .search__result
-  .price__explanation
-    できるだけ品名は詳細に登録してください。
-    %br メーカーや種類ごとに登録しましょう!!
-    検索する際、より明確に最安値を検索できます。
-    %br
-    %br 例）玉ねぎ　→　玉ねぎ1袋3個入り
-    例）ハンドソープ　→　◯◯のハンドソープ
 
 
-      
+
+
