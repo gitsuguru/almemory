@@ -129,7 +129,7 @@ Almemory
 ## pricesテーブル
 |Column|Type|Options|
 |------|----|-------|
-|name|string|null: false, unique: true|
+|name|string|null: false|
 |number|integer|null: false|
 |group|reference|foreign_key: true|
 ### アソシエーション
