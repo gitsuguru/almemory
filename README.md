@@ -1,7 +1,7 @@
 # README
 ![画面収録 2020-08-30 3 23 11 mov](https://user-images.githubusercontent.com/67818465/91643698-83ff3a00-ea70-11ea-8455-305b5f3f7a6f.gif)
 
-## アプリ名
+# アプリ名
 ### Almemory（オルメモリー）
 
 # 概要（このアプリでできること）
