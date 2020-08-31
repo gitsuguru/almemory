@@ -1,17 +1,25 @@
 .MessageId{data: {message: {id: message.id}}}
-  .body__main
-    .body__chat
-      .body__name
-        = message.user.name
-      .body__date
-        = message.created_at.strftime("%Y年%m月%d日 %H時%M分")
-    .body__message
-      - if message.content.present?
-        .body__text
-          = message.content
-      - if message.image.present?
-        .body__picture
-          = image_tag message.image.url
+  .body__flex
+    .left__box
+      -if message.user.image.present?
+        .left__url
+          = image_tag message.user.image.url, class: "left__image"
+      -else
+        .left__url
+          %i.fas.fa-user
+    .body__main
+      .body__chat
+        .body__name
+          = message.user.name
+        .body__date
+          = message.created_at.strftime("%Y年%m月%d日 %H時%M分")
+      .body__message
+        - if message.content.present?
+          .body__text
+            = message.content
+        - if message.image.present?
+          .body__picture
+            = image_tag message.image.url
 
 
 

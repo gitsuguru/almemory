@@ -46,6 +46,9 @@
   overflow: scroll;
   height: calc(100vh - 80px - 100px);
   width: 100vw;
+  &__flex {
+    display: flex;
+  }
   &__chat {
     display: flex;
   }
@@ -77,6 +80,7 @@
       width: 65vw;
     }
     &__message {
+      font-size: 20px;
       padding: 0 50px 0 20px;
       height: 50px;
       width: 65vw;

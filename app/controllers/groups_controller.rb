@@ -30,6 +30,16 @@ class GroupsController < ApplicationController
     end
   end
 
+  def destroy
+    group = Group.find(params[:id])
+    if group.destroy
+      redirect_to root_path, notice: "削除しました"
+    else
+      flash.now[:alert] = "通信エラーです"
+      render :edit
+    end
+  end
+
   private
   def group_params
     params.require(:group).permit(:name, user_ids: [] )

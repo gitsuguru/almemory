@@ -14,7 +14,7 @@ class PricesController < ApplicationController
       redirect_to new_group_price_path, notice: "登録しました"
     else
       @prices = @group.prices
-      flash.now[:alert] = "入力されていない箇所があるか、もうすでに登録されています"
+      flash.now[:alert] = "入力されていない箇所があります"
       render :new
     end
   end
@@ -28,6 +28,7 @@ class PricesController < ApplicationController
     if @price.update(price_params)
       redirect_to new_group_price_path, notice: "最安値を編集しました"
     else
+      flash.now[:alert] = "入力されていない箇所があります"
       render :edit
     end
   end

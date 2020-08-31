@@ -16,6 +16,7 @@ class UsersController < ApplicationController
     if current_user.update(user_params)
       redirect_to root_path, notice: "変更できました"
     else
+      flash.now[:alert] = "入力されていない箇所があります"
       render :edit
     end
   end
@@ -23,6 +24,6 @@ class UsersController < ApplicationController
   private
 
   def user_params
-    params.require(:user).permit(:name, :email)
+    params.require(:user).permit(:name, :email, :image)
   end
 end

@@ -1,7 +1,14 @@
 .top
   .left
+    .left__box
+      -if current_user.image.present?
+        .left__url
+          = image_tag current_user.image.url, class: "left__image"
+      -else
+        .left__url
+          %i.fas.fa-user
     .left__name
-      = current_user.name.truncate(20)
+      = current_user.name.truncate(15)
     = link_to "グループ作成", new_group_path, class:"left__list"
     = link_to "アカウント編集", edit_user_path(current_user), class:"left__list"
     = link_to "ログアウト", destroy_user_session_path, method: :delete, class:"left__list"
@@ -18,3 +25,6 @@
                   = user.name
           .rigth__box__left
             = group.show_last_message.truncate(100)
+
+
+            

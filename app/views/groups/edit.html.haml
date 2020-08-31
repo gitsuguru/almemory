@@ -23,7 +23,9 @@
                   = user.name
                   .member__remove{"data-user-id": user.id, "data-user-name": user.name} 削除
                   %input{name: "group[user_ids][]", type:"hidden", value: user.id}
-    = f.submit "編集", class: "group__send"
+    .group__flex
+      = link_to "削除", group_path(@group.id), method: :delete, class: "group__delete"
+      = f.submit "更新", class: "group__submit"
     = link_to "チャット画面に戻る", group_messages_path(@group), class: "group__back"
 
 
